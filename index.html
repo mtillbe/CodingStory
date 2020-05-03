@@ -10,8 +10,8 @@
     <body>
         <div class="carousel">
             <ul class="carousel__slides">
-                <li><img src="images/A.jpg"></li>
-                <li><img src="images/B.jpg"></li>
+                <li><img src="images/ice2.jpg"></li>
+                <li><img src="images/me_1.jpg"></li>
                 <li><img src="images/C.jpg"></li>
                 <li><img src="images/D.jpg"></li>
             </ul>
@@ -24,7 +24,7 @@
             var container_dimensions = container.dim(); // e.g. { height: 610, width: 960 }
             var slide = carousel.find('img').eq(0);
             var slide_dimensions = slide.dim(); // e.g. { height: 605, width: 960 }
-            var previous_width = slide_dimensions.width; // we set this initially just in case the dimensions of the viewport change before the user has actually moved any slides 
+            var previous_width = slide_dimensions.width; 
             var current_position = current_slide = 0;
             var slides, total_container_width, last_frame_position;
 
