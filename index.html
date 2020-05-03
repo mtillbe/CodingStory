@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-body {
-  background-image: url("images/"ice.jpg""epg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-}
+.mySlides {display:none;}
 </style>
 <body>
-<img src="31944131_1869286049762298_559893328275963904_o (2).jpg" width="1932" height="1449" alt=""/>
 
-<h2>Background Cover</h2>
+<h2 class="w3-center">Manual Slideshow</h2>
 
-<p>Set the background-size property to "cover" and the background image will cover the entire element, in this case the BODY element.</p>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="img_snowtops.jpg" style="width:100%"><img src="ice2.jpg" width="1501" height="1107" alt=""/>
+  <img class="mySlides" src="img_stock.jpg" style="width:100%">
+  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+  <img class="mySlides" src="img_forest.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 </body>
 </html>
-
- <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <title>Slideshow</title>
-      <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-      <div id="slideshow-example" data-component="slideshow">
-        <div role="list">
-          <div class="slide">
-            <img src="" alt="" align="middle">
-          </div>
-          <div class="slide">
-            <img src="" alt="" align="middle">
-          </div>
-          <div class="slide">
-            <img src="" alt="" align="middle">
-          </div>
-        </div>
-      </div>
-    <script src="slideshow.js"></script>
-    </body>
-  </html> 
-<div>
-	
-
